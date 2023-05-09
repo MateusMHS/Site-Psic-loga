@@ -11,7 +11,7 @@ function toggleMenu() {
 
 
 
-  btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('click', toggleMenu);
 
 // REQUISIÇÃO DO FORMULÁRIO
 
@@ -28,7 +28,7 @@ form.addEventListener('submit', (event) => {
   console.log('Nome:', nome);
   console.log('E-mail:', email);
   console.log('Telefone:', telefone);
-  console.log('Texto:' , texto);
+  console.log('Texto:', texto);
 
   Swal.fire(
     'Meus Parabéns',
@@ -46,17 +46,15 @@ var cont = 1
 document.getElementById('radio1').checked = true
 
 setInterval(() => {
-    proximaImg()
+  proximaImg()
 }, 5000)
 
-function proximaImg(){
-    cont++
+function proximaImg() {
+  cont++
 
-    if(cont > 4){
-        cont = 1
-    }
+  if (cont > 4) {
+    cont = 1
+  }
 
-    document.getElementById('radio'+cont).checked = true
+  document.getElementById('radio' + cont).checked = true
 }
-
-
