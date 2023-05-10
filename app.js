@@ -1,17 +1,13 @@
-// MOBILE 
+// MOBILE
 
-const btnMobile = document.getElementById('btn-mobile');
+const menuIcon = document.querySelector("#icon-mobile");
+const navLinks = document.querySelector("#nav");
 
-
-function toggleMenu() {
-
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('active')
-}
+menuIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 
 
-
-btnMobile.addEventListener('click', toggleMenu);
 
 // REQUISIÇÃO DO FORMULÁRIO
 

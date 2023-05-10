@@ -43,18 +43,25 @@ header {
 
 }
 
-#btn-mobile {
-  display: none;
-  padding: 10px;
-  font-size: 17px;
+#icon-mobile {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+  cursor: pointer;
 }
+
 
 @media (max-width: 900px) {
 
+  #nav {
+    justify-content: space-between;
+    width: 100%;
+  }
 
-
-  #btn-mobile {
+  #icon-mobile {
     display: block;
+    cursor: pointer;
   }
 
   nav ul li {
@@ -75,12 +82,30 @@ header {
     margin-top: 800px;
   }
 
+  #contatos {
+    text-align: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  #sintomas {
+    flex-direction: column;
+  }
+
+  #nav.show {
+    display: block;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+
 }
 
 
 #logo {
   margin-top: 20px;
-  width: 210px;
   height: 150px;
 }
 
@@ -127,8 +152,9 @@ main {
 }
 
 
-
 #agenda {
+  position: relative;
+  z-index: 1;
   height: 86vh;
   padding: 10px 15px;
   border-radius: 5px;
@@ -191,7 +217,6 @@ textarea::placeholder {
   border: none;
   font-size: 28px;
   padding: 20px 20px;
-  width: 30.5%;
   background-color: #277fb9;
   color: white;
 }
@@ -207,10 +232,7 @@ textarea::placeholder {
 
 hr {
   margin: 100px;
-  width: 90%;
 }
-
-
 
 /* CSS Sobre Mim */
 
@@ -220,7 +242,7 @@ hr {
 }
 
 #sobre {
-  margin: 0 4rem;
+  margin: 0 2rem;
   display: flex;
   text-align: center;
   background-color: #1dc9e02d;
@@ -228,7 +250,6 @@ hr {
   box-shadow: 0px 0px 2px 0px black;
   padding: 30px;
   margin-bottom: 30px;
-  height: 90vh;
 }
 
 #sobre h1 {
@@ -237,9 +258,9 @@ hr {
 
 
 #foto-sobre {
-  margin-top: 13%;
-  width: 400px;
-  height: 400px;
+  margin-top: 8%;
+  width: 50%;
+  height: 50%;
 }
 
 #lista-sobre {
@@ -289,7 +310,7 @@ section.slider {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 500px;
+  margin-top: 45%;
 }
 
 .nav-manual .manual-btn,
@@ -370,20 +391,11 @@ section.slider {
 }
 
 #btn-agenda {
-  margin-top:50px;
+  margin-top: 50px;
   text-align: center;
 }
 
 /* CSS contato */
-
-
-#contatos {
-  border-radius: 5px;
-  width: 90%;
-  margin: 0 auto;
-  background-color: #ecebeb;
-
-}
 
 .contact-container {
   display: flex;
@@ -394,13 +406,8 @@ section.slider {
 }
 
 
-.contact {
-  text-align: left;
-  border-right: 2px groove #aee1e4;
-}
 
 .contact p {
-  margin-right: 50px;
   margin-top: 60px;
   font-weight: bold;
   font-size: 17px;
@@ -426,6 +433,21 @@ section.slider {
 
 }
 
+.lista-com-icone li a {
+  color: #000000;
+}
+
+.lista-com-icone li a {
+  transition: color 0.3s ease-in-out;
+  /* comando para transição quando o mouse passar por cima do link */
+}
+
+.lista-com-icone li a:hover {
+  color: #aee1e4;
+  /* cor que aparecerá quando o mouse passar */
+}
+
+
 .icon-contato {
 
   width: 14px;
@@ -436,9 +458,6 @@ section.slider {
 
 .map {
   padding-bottom: 5px;
-  padding-left: 38px;
-  text-align: left;
-
 }
 
 .map h1 {
@@ -456,8 +475,8 @@ section.slider {
 
 iframe {
   border: 2px groove #aee1e4;
-  width: 350px;
-  height: 350px;
+  width: 75%;
+  height: 50%;
 
 }
 
