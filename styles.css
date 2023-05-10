@@ -310,8 +310,8 @@ section.slider {
 }
 
 .slide-box img {
-  width: 85%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   margin-top: 10px;
 }
 
@@ -321,7 +321,7 @@ section.slider {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 40%;
+  margin-top: 60%;
 }
 
 .nav-manual .manual-btn,
@@ -427,7 +427,7 @@ section.slider {
 
 .contact h1 {
   margin-top: 5px;
-  color: #aee1e4;
+  color: #0096fa;
   font-size: 38px;
 }
 
@@ -474,7 +474,7 @@ section.slider {
 .map h1 {
   margin-top: 5px;
   margin-bottom: 60px;
-  color: #aee1e4;
+  color: #0096fa;
   font-size: 38px;
 
 }
@@ -485,7 +485,7 @@ section.slider {
 }
 
 iframe {
-  border: 2px groove #aee1e4;
+  border: 2px groove ;
   width: 75%;
   height: 50%;
 
