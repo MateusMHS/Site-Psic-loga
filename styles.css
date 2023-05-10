@@ -38,13 +38,13 @@ header {
   align-items: center;
   justify-content: space-around;
   max-width: 100%;
-  background-color: #1dc9e098;
-  max-height: 100px;
+  background:linear-gradient(to bottom,#1dc9e0c5, white)
+
 
 }
 
 #icon-mobile {
-  display: block;
+  display: none;
   width: 30px;
   height: 30px;
   margin: 15px;
@@ -54,19 +54,35 @@ header {
 
 @media (max-width: 900px) {
 
-  #nav {
-    justify-content: space-between;
-    width: 100%;
+
+  #nav li a {
+    display: none;
   }
+
+  #nav.show li a {
+    position: relative;
+    display: inline-block;
+    justify-content: space-between;
+    z-index: 20;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  #nav.show {
+    display: block;
+    z-index: 2;
+    flex-direction: column;
+    
+  }
+
+
 
   #icon-mobile {
     display: block;
     cursor: pointer;
   }
 
-  nav ul li {
-    display: none
-  }
+
 
   #sobre {
     align-items: center;
@@ -94,14 +110,14 @@ header {
     flex-direction: column;
   }
 
-  #nav.show {
-    display: block;
-    z-index: 2;
-    flex-direction: column;
+  #btn-nav {
+    background-color: white;
   }
 
 
+
 }
+
 
 
 #logo {
@@ -116,9 +132,6 @@ nav ul li a {
   transition: all 0.3 ease;
 
 }
-
-
-
 
 nav ul li a:hover {
   text-decoration: underline;
@@ -141,8 +154,6 @@ nav ul li a:hover {
   width: 28px;
   height: 28px;
 }
-
-
 
 /* CSS agendamento */
 
@@ -299,8 +310,8 @@ section.slider {
 }
 
 .slide-box img {
-  width: 90%;
-  height: 77%;
+  width: 85%;
+  height: 50%;
   margin-top: 10px;
 }
 
@@ -310,7 +321,7 @@ section.slider {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 45%;
+  margin-top: 40%;
 }
 
 .nav-manual .manual-btn,
